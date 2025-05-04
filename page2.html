@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>td bem?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup">
+        <!-- Música -->
+        <iframe src="https://open.spotify.com/embed/track/1mSxbLW7fKABfeY4lGpg0E?utm_source=generator&theme=0" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="imgs/foto1.jpg" alt="Foto 1">
+        </div>
+        <div class="slide">
+            <img src="imgs/foto2.jpg" alt="Foto 2">
+        </div>
+        <div class="slide">
+            <img src="imgs/foto3.jpg" alt="Foto 2">
+        </div>
+        <div class="slide">
+            <img src="imgs/foto4.jpg" alt="Foto 4">
+        </div>
+    </div>
+    
+    <a href="page3.html" class="link">CLICA AQUI</a>
+  
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Esconde todas as imagens
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; } // Reseta para a primeira imagem
+            slides[slideIndex - 1].style.display = "block"; // Mostra a imagem atual
+            setTimeout(showSlides, 3000); // Muda a cada 3 segundos
+        }
+        showSlides(); // Inicia o slideshow
+    </script>
+</body>
+</html>
